@@ -34,7 +34,6 @@ def launch_app(args, logger):
         # connecting to youtube api
         youtube = youtube_connection(config["api_key"], logger)
 
-
         # searching
         check_all_keywords(file_path, logger, youtube, language=config["language"])
 

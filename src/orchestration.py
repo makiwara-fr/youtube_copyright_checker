@@ -3,7 +3,6 @@ from pathlib import Path
 from datetime import datetime
 import pandas as pd
 
-from src.youtube import youtube_connection
 from src.search import check_keyword
 from src.config import *
 
@@ -33,7 +32,7 @@ def check_all_keywords(file_path: Path, logger, youtube, language=DEFAULT_LANGUA
         kw = row["keywords"]
 
         try:
-            audit = check_keyword(kw, youtube, channel_exclusions=exclusions)
+            audit = check_keyword(kw, youtube, channel_exclusions=exclusions, language=language)
 
             df_audit = pd.concat(
                 [
