@@ -23,10 +23,7 @@ def check_all_keywords(file_path: Path, logger, youtube, language=DEFAULT_LANGUA
     df_audit = pd.DataFrame()
 
 
-    if not youtube:
-        logger.error("Cannot connect to youtube")
-        return
-
+    
     # Parcourir les marques et rechercher des vidéos
     for index, row in df.iterrows():
         kw = row["keywords"]
