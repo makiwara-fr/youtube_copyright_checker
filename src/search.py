@@ -41,6 +41,7 @@ def check_keyword(keyword:str, youtube, channel_exclusions=[]):
         part="id,snippet",
         maxResults=30,  
         type="video",
+        relevanceLanguage="fr"
     )
 
     response = request.execute()
